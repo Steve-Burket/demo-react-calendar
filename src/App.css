@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  padding: 10px;
+  /* padding: 10px; */
   margin: 0px;
   background-color: #282c34;
   display: flex;
@@ -38,17 +38,17 @@
 table, th, tr, td {
   margin: 10px;
   padding: 5px;
-  width: 20px;
+  width: 33%;
   border: 1px solid black;
   border-collapse: collapse;
 }
 
 
-/* @keyframes App-logo-spin {
+@keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-} */
+}

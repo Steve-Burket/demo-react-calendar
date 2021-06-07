@@ -10,28 +10,39 @@ function App() {
   const [dateState, setDateState] = useState(new Date(2021, 5, 7));
   // const [dayOfWeek, setDayOfWeek] = useState('')
 
+  // The beginning of a period that shall be displayed.
+  // If you wish to use React-Calendar in an uncontrolled way,
+  // use defaultActiveStartDate instead.
+  // allowPartialRange;
+
   // Change Date Method
   const changeDate = (e) => {
     setDateState(e);
   };
 
   // Add a  LESSON
-  const addLesson = (e) => {
+  // When buttons is clicked
+  // conditonally render a Form
+  // w/ fields:
+  // Student's name,
+  // instrument,
+  // date,
+  // time,
+  // location
+  // save button
+  const addLesson = (e) => {};
 
-  }
-
-  
   return (
     <div className='App'>
       <header className='App-header'>
         <h1>Lessons With... (teachers name) </h1>
-        <h2>Demo React Calendar </h2>
+        <h3>Demo React Calendar </h3>
       </header>
       <div className='calendar-container'>
         <Calendar value={dateState} onChange={changeDate} />
       </div>
       <p>
-        Current selected date is:s
+        Current selected date is:
         <b>{moment(dateState).format('MMMM Do YYYY')}</b>
       </p>
       <button onClick={(e) => addLesson(e)}>+ Add lesson</button>
@@ -109,6 +120,10 @@ function App() {
             <td></td> */}
           </tr>
         </tbody>
+        <form>
+          <input placeholder='name' />
+          <input placeholder='instrument' />
+        </form>
       </table>
     </div>
   );
